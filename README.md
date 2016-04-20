@@ -1,4 +1,4 @@
-foundation-apps-modal
+foundation-apps-modal-provider
 ======================
 
 [Zurb Foundation-apps modal](http://foundation.zurb.com/apps/docs/#!/modal) with angular promises.
@@ -7,18 +7,6 @@ foundation-apps-modal
 2. [Usage](#usage)
 
 ## Install
-
-Install with Bower:
-
-```
-bower install foundation-apps-modal
-```
-
-Reference the script:
-
-```html
-<script src="bower_components\foundation-apps-modal\foundation-apps-modal.js"></script>
-```
 
 Add the module zfaModal as a dependency to your application:
 
@@ -30,19 +18,28 @@ var app = angular.module('myapp', ['zfaModal']);
 
 #### Modal
 
-Custom modal:
+Define modal in your custom controller:
 
 ```js
-app.controller('Controller', function($scope, zfaModal) {
-  $scope.showModal = function() {
-  	zfaModal({
-        template: '<div zf-modal=""><a class="close-button" zf-close="">×</a><h4>Hello!</h4>' +
-            '<a ng-click="resolve()" class="button primary">OK</a><a ng-click="reject()" class="button secondary">Cancel</a></div>'
-    })
-        .then(function() { /* ... */ })
-        .catch(function() { /* ... */ });
-  };
-});
+angular.module('some-module')
+    .controller('someController', someController);
+
+    function someController(modalService) { // <-- inject modal provider into controller
+
+        var vm = this;
+
+        vm.openModal = function () {
+
+        var modalPromise = modalService.open('exampleModal',{
+            exampleMessage : 'Cheers!'
+        });
+
+        modalPromise.then(function (response) { // <-- example of handling promises
+            vm.result = response;
+        })
+        .catch(function () { /* write your error handler */ });
+        }
+    }
 ```
 
 Modal with controller:

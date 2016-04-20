@@ -1,12 +1,14 @@
 {
-  "name": "foundation-apps-modal",
-  "version": "0.1.1",
-  "homepage": "https://github.com/mmiii/foundation-apps-modal",
+  "name": "foundation-apps-modal-provider",
+  "version": "0.1",
+  "homepage": "https://github.com/Miklecc/foundation-apps-modal-provider",
   "authors": [
-    "mmiii (github.com/mmiii)"
+    "mmiii (github.com/mmiii)",
+    "vinhnghi223 (github.com/vinhnghi223)",
+    "Miklecc (github.com/Miklecc)"
   ],
-  "description": "Zurb Foundation-apps modal with angular promises.",
-  "main": "foundation-apps-modal.js",
+  "description": "Zurb Foundation for Apps apps modal provider with angularJS promises",
+  "main": "modalProvider.js",
   "keywords": [
     "angular",
     "zurb",
@@ -18,8 +20,7 @@
   "ignore": [
     "bower_components",
     ".git",
-    ".gitignore",
-    ".gitattributes"
+    ".gitignore"
   ],
   "dependencies": {
     "angular": "~1.3.x",
