@@ -28,9 +28,7 @@ var app = angular.module('myapp', ['zfaModal']);
 
 ## Usage
 
-### 1
-
-Define modal in your custom controller:
+1) Define modal in your custom controller:
 
 ```js
 angular.module('myapp')
@@ -54,9 +52,7 @@ angular.module('myapp')
     }
 ```
 
-### 2
-
-Define provider's config of your modal. You are free to choose any name of the modal, controller, template and local variables.
+2) Define provider's config of your modal. You are free to choose any name of the modal, controller, template and local variables.
 
 ```
 angular.module('myapp')
@@ -73,15 +69,14 @@ angular.module('myapp')
     }]);
 ```
 
-#### Modal options
+**Modal options**
 
 * `controller`: Modal controller.
 * `templateUrl`: Modal template url.
 * `template`: Modal template.
 * `locals`: Injection locals for modal controller.
 
-### 3
-Set up modal controller this way:
+3) Set up modal controller this way:
 
 ```
 function someModalController($scope, exampleMessage, zfaModalDefer, zfaModalProvider) {
@@ -95,8 +90,6 @@ function someModalController($scope, exampleMessage, zfaModalDefer, zfaModalProv
 ```
 
 Use `zfaModalDefer.resolve();` and `zfaModalDefer.reject();` inside modal controller to close modal programmatically.
-
-### 4
 
 4) Set up modal template this way:
 
@@ -117,9 +110,7 @@ Include `zf-modal` attribute to parent tag of your template. There is also set o
 * zf-hard-toggle
 * zf-close-all
 
-### 5
-
-Change styling of modal:
+5) Change styling of modal:
 
 ```
 .some-modal { // <-- styling of overlay
@@ -128,10 +119,9 @@ Change styling of modal:
   }
 }
 
-### 6
-Predefined modals
+6) Predefined modals
 
-#### Alert
+**Alert**
 
 ```js
 zfaModal.alert({ message: "Alert!!!" })
@@ -143,7 +133,7 @@ locals:
 * `message`: Alert message.
 * `ok`: Ok button text.
 
-#### Confirm
+**Confirm**
 
 ```js
 zfaModal.confirm({ message: "Confirm?" })
@@ -156,7 +146,7 @@ locals:
 * `ok`: Ok button text.
 * `cancel`: Cancel button text.
 
-#### Prompt
+**Prompt**
 
 ```js
 zfaModal.prompt({ message: "Type your text:" })
