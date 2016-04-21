@@ -7,7 +7,7 @@
     "vinhnghi223 (github.com/vinhnghi223)",
     "Miklecc (github.com/Miklecc)"
   ],
-  "description": "Zurb Foundation for Apps apps modal provider with angularJS promises",
+  "description": "Zurb Foundation-apps modal with angular promises.",
   "main": "modalProvider.js",
   "keywords": [
     "angular",
@@ -20,7 +20,8 @@
   "ignore": [
     "bower_components",
     ".git",
-    ".gitignore"
+    ".gitignore",
+    ".gitattributes"
   ],
   "dependencies": {
     "angular": "~1.3.x",
