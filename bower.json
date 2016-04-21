@@ -1,11 +1,9 @@
 {
-  "name": "foundation-apps-modal-provider",
+  "name": "foundation-apps-modal",
   "version": "0.1",
-  "homepage": "https://github.com/Miklecc/foundation-apps-modal-provider",
+  "homepage": "https://github.com/Miklecc/foundation-apps-modal",
   "authors": [
     "mmiii (github.com/mmiii)",
-    "vinhnghi223 (github.com/vinhnghi223)",
-    "Miklecc (github.com/Miklecc)"
   ],
   "description": "Zurb Foundation-apps modal with angular promises.",
   "main": "modalProvider.js",
